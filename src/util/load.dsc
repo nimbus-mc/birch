@@ -29,9 +29,9 @@ birch_load:
   - flag server birch_bridge_channel:<[config].proc[birch_channel].context[bridge]>
   #- flag server birch_auth_channel:
 
-  # Send startup message
-  - if <[bridge].contains[startup]>:
-    - ~run birch_send defmap:<map.with[bridge].as[<[bridge]>].with[msg].as[<[bridge].get[startup].parsed>]>
-
   # Set enabled flag
   - flag server birch_enabled:true
+
+  # Send startup message
+  - if <[bridge].contains[startup]>:
+    - run birch_send defmap:<map.with[bridge].as[<[bridge]>].with[msg].as[<[bridge].get[startup].parsed>]>

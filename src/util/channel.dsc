@@ -1,6 +1,5 @@
 birch_channel:
   type: procedure
-  definitions: bridge
+  definitions: config|key
   script:
-  - debug log <[bridge]>
-  - determine <discord[birch].group[<[bridge].get[group]>].channel[<[bridge].get[channel]>]>
+  - determine <[config].proc[birch_group].channel[<[config].data_key[<[key]>].get[channel]>]>

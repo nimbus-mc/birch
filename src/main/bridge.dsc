@@ -9,5 +9,5 @@ birch_bridge:
     - if <server.flag[birch_enabled].if_null[false]>:
       - define bridge <script[birch_config].data_key[bridge]>
 
-      - if !<context.new_message.author.is_bot> && <context.channel.id> == <[bridge].proc[birch_channel].id>:
+      - if !<context.new_message.author.is_bot> && <context.channel.id> == <server.flag[birch_bridge_channel].id>:
         - narrate targets:<server.online_players> <context.new_message.author.proc[<[bridge].get[format].get[discord]>].context[<context.new_message.text>]>

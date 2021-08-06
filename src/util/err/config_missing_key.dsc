@@ -2,7 +2,7 @@ birch_ERR_CONFIG_MISSING_KEY:
   type: procedure
   definitions: config|key
   script:
-  - determine "<[config].keys.contains[<[key]>].not.proc[birch_ERR_MISSING_KEY].context[Birch config|<[key]>]>"
+  - determine "<[config].list_keys.contains[<[key]>].not.proc[birch_ERR_MISSING_KEY].context[Birch config|<[key]>]>"
 
 birch_ERR_CONFIG_MAP_MISSING_KEY:
   type: procedure

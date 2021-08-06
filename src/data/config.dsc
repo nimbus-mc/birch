@@ -2,10 +2,10 @@ birch_config:
   type: data
   enabled: true
   tokenfile: data/tokenfile.txt
+  group: Project Chi
   bridge:
-    group: Project Chi
     channel: test
-    startup: hello world
+    startup: Server reloaded! (<util.time_now.format>)
     format:
       discord: birch_format_discord
       server: birch_format_server

@@ -2,7 +2,7 @@ birch_load:
   type: task
   script:
   # Reset enabled flag
-  - flag server birch_enabled:false
+  - flag server birch_enabled:!
 
   # Check config
   - define config <script[birch_config]>
@@ -31,7 +31,7 @@ birch_load:
 
   # Send startup message
   - if <[bridge].contains[startup]>:
-    - run birch_send defmap:<map.with[bridge].as[<[bridge]>].with[msg].as[<[bridge].get[startup].parsed>]>
+    - ~run birch_send defmap:<map.with[bridge].as[<[bridge]>].with[msg].as[<[bridge].get[startup].parsed>]>
 
   # Set enabled flag
   - flag server birch_enabled:true

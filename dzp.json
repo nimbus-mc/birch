@@ -1,0 +1,8 @@
+{
+  "name": "birch",
+  "description": "Chi Discord bridge and authentication",
+  "version": "1.0.0",
+  "author": "acikek",
+  "repository": "",
+  "dependencies": []
+}
